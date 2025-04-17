@@ -19,8 +19,8 @@ This project is part of the seventh exercise in the course. It implements a queu
 ## Tasks
 - [x] maven: Setup Maven project and .gitignore.
 - [x] readme: Write README with project details and tasks.
-- [ ] maven_detail: Add dependencies, repository link, and developer info.
-- [ ] bug_hunt: Fix three code errors in the existing files.
+- [x] maven_detail: Add dependencies, repository link, and developer info.
+- [x] bug_hunt: Fix three code errors in the existing files.
 - [ ] drink: Implement Cocktail class with ingredients (Liquid objects).
 - [ ] queue: Create DrinkQueue class to manage drinks.
 - [ ] tests: Write unit tests and ensure 100% coverage.
