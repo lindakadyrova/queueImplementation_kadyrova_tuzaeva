@@ -2,11 +2,12 @@ package at.fhj.msd;
 
 import java.util.List;
 
-public class Cocktail extends Drink {
+public class Cocktail implements IDrink {
+  private String name;
   private List<Liquid> ingredients;
 
   public Cocktail(String name, List<Liquid> ingredients) {
-    super(name);
+    this.name = name;
     this.ingredients = ingredients;
   }
 
@@ -22,8 +23,9 @@ public class Cocktail extends Drink {
   @Override
   public double getAlcoholPercent() {
     double totalVol = getVolume();
-    if (totalVol == 0)
+    if (totalVol == 0) {
       return 0;
+    }
 
     double alcohol = 0;
     for (Liquid l : ingredients) {
@@ -36,9 +38,20 @@ public class Cocktail extends Drink {
   @Override
   public boolean isAlcoholic() {
     for (Liquid l : ingredients) {
-      if (l.getAlcoholPercent() > 0)
+      if (l.getAlcoholPercent() > 0) {
         return true;
+      }
     }
     return false;
+  }
+
+  @Override
+  public String getName() {
+    return name;
+  }
+
+  @Override
+  public void setName(String name) {
+    this.name = name;
   }
 }
